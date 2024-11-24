@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/img/logo3.png" type="image/x-icon">
+    <title>Admin</title>
+    <link href="/css/53bootstrap.min.css" rel="stylesheet">
+    <link href="/css/loader.css" rel="stylesheet">
+    <link href="/css/admin.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    <main class="form-signin">
+        <form onsubmit="return false;" id="adminform">
+            <img class="mb-4" src="/img/logo3.png" alt="logo" width="100" height="100">
+            <h1 class="h3 mb-3 fw-normal">Admin Panel</h1>
+            <div class="form-floating">
+                <input type="email" class="form-control" id="adminemail" autocomplete="off" required>
+                <label for="adminemail">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="adminpassword" autocomplete="off" required>
+                <label for="adminpassword">Password</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <div class="alert alert-danger mt-3" role="alert" id="error" style="display: none;"></div>
+            <div class="alert alert-success mt-3" role="alert" id="success" style="display: none;"></div>
+        </form>
+    </main>
+    <div class="loader">
+        <img class="" src="/img/logo3.png" alt="Logo" width="50" height="50">
+        <h3 class="mt-2 mr-5" style="margin-right: 20px;">CoinSale</h3>
+    </div>
+    <script src="/js/loader.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

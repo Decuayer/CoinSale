@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/img/logo3.png" type="image/x-icon">
+    <!--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/css/general.css" rel="stylesheet">
+    <link href="/css/loader.css" rel="stylesheet">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a href="/profile" class="navbar-brand">
+                    <img src="/img/logo3.png" alt="Logo" width="50" height="50">
+                    CoinSale
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: space-between;">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="/profile">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/rules">Rules</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/faq">FAQ</a>
+                        </li>
+
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/mining">Mining</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/deposit">Deposit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="/withdraw">Withdraw</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user"><span class="border-bottom"><span class="fw-bolder">Balance: </span><%= (data.balance).toFixed(2) %> $</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <%= data.nickname %>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                </svg>
+                            </a>
+                            <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                                <a href="/user" class="dropdown-item">Profile</a>
+                                <a href="/settings" class="dropdown-item">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="/logout" class="dropdown-item">Logout</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+    <main role="main">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="first-slide img-responsive" src="/img/bg.png" alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h4 class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">For every friend you invite:</h4>
+                            <p class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">When they invest $50, <span class="text-success">$13</span> will be instantly credited to your account.</p>
+                            <p class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">When they invest $100, <span class="text-success">$20</span> will be instantly credited to your account.</p>
+                            <h4 class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">The more you invite, the more you earn; the more you earn, the more you help others earn!</h4>       
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="first-slide img-responsive" src="/img/bg-2.png" alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h4 class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">For every friend you invite:</h4>
+                            <p class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">When they invest $50, <span class="text-success">$13</span> will be instantly credited to your account.</p>
+                            <p class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">When they invest $100, <span class="text-success">$20</span> will be instantly credited to your account.</p>
+                            <h4 class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">The more you invite, the more you earn; the more you earn, the more you help others earn!</h4>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="container bar">
+            <div class="row">
+                <div class="col-2">
+                    <span class="badge badge-secondary">VIP 0</span>
+                </div>
+                <div class="col-2">
+                    <span class="badge badge-secondary">VIP 1</span>
+                </div>
+                <div class="col-2">
+                    <span class="badge badge-secondary">VIP 2</span>
+                </div>
+                <div class="col-2">
+                    <span class="badge badge-secondary">VIP 3</span>
+                </div>
+                <div class="col-2">
+                    <span class="badge badge-secondary">VIP 4</span>
+                </div>
+                <div class="col-2">
+                    <span class="badge badge-secondary">VIP 5</span>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="progress">
+                        <% if (data.vip == "VIP 0") { %>
+                            <div class="progress-bar bg-success" style="width:3.5%;">
+                                <div class="progress-value">0%</div>
+                            </div>
+                        <% } else if(data.vip == "VIP 1") { %>
+                            <div class="progress-bar bg-success" style="width:20.5%;">
+                                <div class="progress-value">20%</div>
+                            </div>
+                        <% } else if(data.vip == "VIP 2") { %>
+                            <div class="progress-bar bg-success" style="width:37.5%;">
+                                <div class="progress-value">40%</div>
+                            </div>
+                        <% } else if(data.vip == "VIP 3") { %>
+                            <div class="progress-bar bg-success" style="width:54.5%;">
+                                <div class="progress-value">60%</div>
+                            </div>
+                        <% } else if(data.vip == "VIP 4") { %>
+                            <div class="progress-bar bg-success" style="width:72%;">
+                                <div class="progress-value">80%</div>
+                            </div>
+                        <% } else if(data.vip == "VIP 5") { %>
+                            <div class="progress-bar bg-success" style="width:96%;">
+                                <div class="progress-value">100%</div>
+                            </div>
+                        <% } else { %>
+                            <div class="progress-bar bg-success" style="width:0%;">
+                                <div class="progress-value">0%</div>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container marketing mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/img/0-logo3.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>VIP 0</h2>
+                    <p>
+                        Withdrawals are not allowed. Mining is not allowed. To upgrade to VIP 1, a minimum investment of $50 is required.
+                    </p>
+                    <p><a class="btn btn-secondary" href="/rules" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/img/1-bussiness.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>VIP 1</h2>
+                    <p>
+                        Mining is allowed. Withdrawals between a minimum of $50 and a maximum of $200 are allowed. To upgrade to VIP 2, your balance must be at least $100, and you must have 3 referrals.
+                    </p>
+                    <p><a class="btn btn-secondary" href="/rules" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/img/2-kovboy.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>VIP 2</h2>
+                    <p>
+                        Mining is allowed. A $10 bonus will be credited to your account. Withdrawals between a minimum of $50 and a maximum of $500 are allowed. To upgrade to VIP 3, your balance must be at least $300, and you must have 10 referrals.
+                    </p>
+                    <p><a class="btn btn-secondary" href="/rules" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/img/3-kolye.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>VIP 3</h2>
+                    <p>
+                        Mining is allowed. A $50 bonus will be credited to your account. Withdrawals between a minimum of $50 and a maximum of $1000 are allowed. To upgrade to VIP 4, your balance must be at least $500, and you must have 25 referrals. At this level, you qualify for a promotion to CoinSale Coordinator.
+                    </p>
+                    <p><a class="btn btn-secondary" href="/rules" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/img/4-sapka-kolye.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>VIP 4</h2>
+                    <p>
+                        Mining is allowed twice within 24 hours. A $200 bonus will be credited to your account. Profits can be withdrawn twice a week. Withdrawals between a minimum of $50 and a maximum of $2000 are allowed. You can contact live support for Coordinator status. To upgrade to VIP 5, your balance must be at least $1000, and you must have a minimum of 50 referrals. At this level, you gain the opportunity to work with us in our office.
+                    </p>
+                    <p><a class="btn btn-secondary" href="/rules" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/img/5-tac.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>VIP 5</h2>
+                    <p>
+                        Mining is allowed twice within 24 hours. A $500 bonus will be credited to your account. Profits can be withdrawn twice a week. Withdrawals between a minimum of $50 and a maximum of $10000 are allowed. You can contact live support to send a photo of your VIP level and issue your ticket. Details will be provided via live support.
+                    </p>
+                    <p><a class="btn btn-secondary" href="/rules" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+        
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">About <span class="text-muted">CoinSale</span></h2>
+                    <p class="lead">Established in 2019 under the name CoinSale, our cryptocurrency exchange was created with a vision to revolutionize the digital asset trading experience. CoinSale combines cutting-edge technology with a user-centric approach, offering a secure, efficient, and transparent platform for trading cryptocurrencies. Our team is committed to empowering users worldwide, enabling seamless participation in the fast-evolving digital economy.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" src="/img/logo2.png" alt="Generic placeholder image">
+                </div>
+            </div>
+        </div>
+        <footer class="container">
+            <hr class="featurette-divider">
+
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2019-2025 CoinSale, Inc. &middot; <a href="/privacy&terms">Privacy</a> &middot; <a href="/privacy&terms">Terms</a></p>
+        </footer>
+    </main>
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="align-items:center;">
+                    <img src="/img/logo3.png" alt="Logo" width="50" height="50">
+                    <h5 class="modal-title text-dark align-items-center" id="exampleModalLabel" >
+                        CoinSale
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="font-weight-bold text-dark">For every friend you invite:</h4>
+                    <p class="text-dark">When they invest $50, <span class="text-success">$13</span> will be instantly credited to your account.</p>
+                    <p class=" text-dark">When they invest $100, <span class="text-success">$20</span> will be instantly credited to your account.</p>
+                    <h6 class="font-weight-bold text-dark">The more you invite, the more you earn; the more you earn, the more you help others earn!</h4>       
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loader">
+        <img class="" src="/img/logo3.png" alt="Logo" width="50" height="50">
+        <h3 class="mt-2 mr-5">CoinSale</h3>
+    </div>
+
+    <script src="/js/loader.js"></script>
+    <script src="/js/modal.js"></script>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="/js/holder.min.js"></script>
+    <!--
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.8/holder.min.js" integrity="sha512-O6R6IBONpEcZVYJAmSC+20vdsM07uFuGjFf0n/Zthm8sOFW+lAq/OK1WOL8vk93GBDxtMIy6ocbj6lduyeLuqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+</body>
+</html>

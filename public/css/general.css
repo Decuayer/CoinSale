@@ -1,0 +1,36 @@
+/*@import url(https://fonts.googleapis.com/css?family=Raleway);*/
+
+body {
+    color: #fff;
+    background: #141d2b;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: #fff;
+}
+
+hr {
+    color: #fff;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+nav.navbar {
+    color: #000 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+nav.navbar a {
+    color: #000 !important;
+}
+
+nav.navbar .navbar-toggler .navbar-toggler-icon {
+    color: #000 !important;
+}
